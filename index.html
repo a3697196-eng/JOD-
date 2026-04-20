@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Grow Up SMM Panel</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>🚀 Grow Up SMM Panel</h1>
+
+    <button onclick="login()">Login with Google</button>
+    <p id="userInfo"></p>
+
+    <hr>
+
+    <h2>Add Funds</h2>
+    <input type="number" id="amount" placeholder="Enter amount">
+    <button onclick="generateQR()">Generate QR</button>
+
+    <canvas id="qr"></canvas>
+  </div>
+
+  <!-- QR Library -->
+  <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+
+  <!-- Main Script -->
+  <script type="module" src="app.js"></script>
+
+</body>
+</html>
