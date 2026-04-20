@@ -10,7 +10,7 @@ import {
   setDoc
 } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
 
-// LOGIN FUNCTION
+// LOGIN
 window.login = async function () {
   try {
     const provider = new GoogleAuthProvider();
@@ -26,17 +26,17 @@ window.login = async function () {
     });
 
   } catch (err) {
+    alert("Login Error");
     console.log(err);
-    alert("Login Failed");
   }
 };
 
-// QR GENERATE FUNCTION
+// QR GENERATE
 window.generateQR = function () {
   const amount = document.getElementById("amount").value;
 
-  if (!amount || amount <= 0) {
-    alert("Enter valid amount");
+  if (!amount) {
+    alert("Enter amount");
     return;
   }
 
